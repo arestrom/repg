@@ -1,0 +1,17 @@
+Package: repg
+Type: Package
+Title: Wrapper Functions To Connect To PostgreSQL Databases
+Version: 0.1.9000
+Author: Are Strom
+Maintainer: Are Strom <are.strom@gmail.com>
+Description: A collection of functions to securely connect to PostgreSQL databases using 
+    credentials stored in .Renviron. Avoids the need to supply usernames or password in
+    code. Also avoids potential for accidentally exposing credentials when sharing or
+    posting code to GitHub.
+License: MIT + file LICENSE
+Depends: R (>= 3.4.1)
+Imports:
+    DBI (>= 0.7),
+    RPostgres (>= 0.1-4)
+Encoding: UTF-8
+LazyData: true
