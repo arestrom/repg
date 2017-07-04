@@ -1,7 +1,7 @@
 Package: repg
 Type: Package
 Title: Wrapper Functions To Connect To PostgreSQL Databases
-Version: 0.1.9000
+Version: 0.1.0
 Author: Are Strom
 Maintainer: Are Strom <are.strom@gmail.com>
 Description: A collection of functions to securely connect to PostgreSQL databases using 
