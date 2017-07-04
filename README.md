@@ -17,5 +17,5 @@ There was a bug in R-3.4.0 that prevented installation of this package. You will
 ``` r
 # Install the development version from GitHub:
 # install.packages("devtools")
-devtools::install_github("arestrom/remisc")
+devtools::install_github("arestrom/repg")
 ```
