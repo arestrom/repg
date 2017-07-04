@@ -29,6 +29,6 @@ db_con_local = pg_con(host_label = "pg_host_aws",
                       user_label = "pg_me",
                       pw_label = "pg_key",
                       port = "5432")
-tbl_count_local = dbGetQuery(db_con_local, paste0("select count(*) from survey_type_lut"))
+tbl_count_local = DBI::dbGetQuery(db_con_local, paste0("select count(*) from survey_type_lut"))
 dbDisconnect(db_con_local)
 }
