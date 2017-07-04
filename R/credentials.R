@@ -40,7 +40,7 @@ pg_host <- function(host_label) {
 #'                       pw_label = "pg_key",
 #'                       port = "5432")
 #' tbl_count_local = DBI::dbGetQuery(db_con_local, paste0("select count(*) from survey_type_lut"))
-#' dbDisconnect(db_con_local)
+#' DBI::dbDisconnect(db_con_local)
 #' @export
 pg_con = function(host_label, dbname, user_label, pw_label, port = '5432') {
   con <- DBI::dbConnect(
