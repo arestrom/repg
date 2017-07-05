@@ -34,12 +34,15 @@ pg_host <- function(host_label) {
 #' @param port a port string used to connect to the database. Defaults to '5432'
 #' @return A connection object to a database located on a PostgreSQL server
 #' @examples
-#' db_con_local = pg_con(host_label = "pg_host_aws",
-#'                       dbname = "sport_sampling",
-#'                       user_label = "pg_me",
-#'                       pw_label = "pg_key",
-#'                       port = "5432")
-#' tbl_count_local = DBI::dbGetQuery(db_con_local, paste0("select count(*) from survey_type_lut"))
+#' db_con_local = pg_con(
+#'   host_label = "pg_host_aws",
+#'   dbname = "sport_sampling",
+#'   user_label = "pg_me",
+#'   pw_label = "pg_key",
+#'   port = "5432")
+#' tbl_count_local = DBI::dbGetQuery(
+#'   db_con_local, 
+#'   paste0("select count(*) from survey_type_lut"))
 #' DBI::dbDisconnect(db_con_local)
 #' @export
 pg_con = function(host_label, dbname, user_label, pw_label, port = '5432') {
