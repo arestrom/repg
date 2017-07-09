@@ -5,7 +5,7 @@ repg
 Overview
 --------
 
-This package includes a collection of tools to work with PostgreSQL connections and databases. Connection functions require credentials to be stored in your `.Renviron` file. This avoids the need to supply usernames or password in code. It also avoids potential for accidentally exposing credentials when sharing code in public repositories.
+This package includes a collection of tools to work with PostgreSQL connections and databases. Connection function requires credentials to be stored in your `.Renviron` file. This avoids the need to supply usernames or password in code. It also avoids potential for accidentally exposing credentials when sharing code in public repositories.
 
 The idea of storing credentials in the `.Renviron` file comes from a post by Hadley Wickham: <https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html>
 
