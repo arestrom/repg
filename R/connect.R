@@ -128,11 +128,11 @@ pg_terminate_backend = function(host_label,
                   user_label = user_label,
                   pw_label = pw_label,
                   port = port)
-  dbGetQuery(db_con,
+  DBI::dbGetQuery(db_con,
              paste(sep = "",
                    "SELECT pg_terminate_backend(pg_stat_activity.pid) ",
                    "FROM pg_stat_activity ",
                    "WHERE pg_stat_activity.datname = '", dbname, "' ",
                    "AND pid <> pg_backend_pid()"))
-  dbDisconnect(db_con)
+  DBI::dbDisconnect(db_con)
 }
