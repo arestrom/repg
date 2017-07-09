@@ -59,7 +59,7 @@ my_pg_username_local=semi_secret_user
 my_pg_password_local=semi_secret_password
 
 ```
-Simply add your credentials as in the example above. The parameters `host_label, user_label, and password_label` are the parts before the equals sign. The actual values needed to connect are the parts following the equals sign. See the example for the `pg_con()` function to see how you would use the labels as arguments to the function. 
+Simply add your credentials as in the example above. The arguments to the `pg_con()` function: `host_label, user_label, and password_label` are the parts before the equals sign. The actual values needed to connect are the parts following the equals sign. See the example for the `pg_con()` function. 
 
 Make sure there is an extra space at the bottom of the last entry in the `.Renviron` file before saving, or R will silently fail to read the entries. You will need to close RStudio and then reopen after saving. Afterwards, every time you open RStudio the environment variables will be available in your session.
 
