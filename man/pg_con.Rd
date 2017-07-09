@@ -2,23 +2,20 @@
 % Please edit documentation in R/connect.R
 \name{pg_con}
 \alias{pg_con}
-\title{Create a connection object to a database on a PostgreSQL server}
+\title{Create connection object to database on a PostgreSQL server}
 \usage{
 pg_con(host_label, dbname, user_label, pw_label, port = "5432")
 }
 \arguments{
-\item{host_label}{a string label to identify the server host in the .Renviron
-file}
+\item{host_label}{a string label to identify the server host}
 
 \item{dbname}{a database on a PostgreSQL server}
 
-\item{user_label}{a string label to identify the server username in the
-.Renviron file}
+\item{user_label}{a string label to identify the server username}
 
-\item{pw_label}{a string label to identify the server password in the
-.Renviron file}
+\item{pw_label}{a string label to identify the server password}
 
-\item{port}{a port string used to connect to the database. Defaults to '5432'}
+\item{port}{a port string used to connect to the database}
 }
 \value{
 A connection object to a database located on a PostgreSQL server
@@ -37,8 +34,9 @@ See the Readme file at \url{https://github.com/arestrom/repg} for
   connection credentials in your \code{.Renviron} file.
 }
 \section{Warning}{
- Remember to \emph{always close} your connection after you
-  are done. See example below.
+
+Remember to \emph{always close} your connection after you are done. See
+example below.
 }
 
 \examples{
