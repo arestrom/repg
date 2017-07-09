@@ -42,10 +42,10 @@ pg_host <- function(host_label) {
 #' \dontrun{
 #' # Create a connection object to a PostgreSQL database on localhost
 #' db_con_local = pg_con(
-#'   host_label = "pg_host_local",
+#'   host_label = "my_pg_host_local",
 #'   dbname = "sport_sampling",
-#'   user_label = "my_user_label",
-#'   pw_label = "my_password_label",
+#'   user_label = "my_pg_username_local",
+#'   pw_label = "my_pg_password_local",
 #'   port = "5432")
 #'
 #' # Connect to database and retrive a count of records in a table

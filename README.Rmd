@@ -17,21 +17,56 @@ options(tibble.print_min = 5, tibble.print_max = 5)
 
 ## Overview
 
-This package is a start on a collection of utility functions for connecting to databases on
-PostgreSQL servers. I created this package primarily for my own use. 
+This package includes a collection of tools to work with PostgreSQL connections
+and databases. Connection functions require credentials to be stored in your
+.Renviron file. This avoids the need to supply usernames or password in code. It
+also avoids potential for accidentally exposing credentials when sharing code in
+public repositories I created this package primarily for my own use.
 
-The idea of storing credentials in the .Renviron file originated from a post by Hadley Wickham:
+The idea of storing credentials in the .Renviron file originated from a post by
+Hadley Wickham: 
 https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html
 
 ## Installation
 
-There was a bug in R-3.4.0 that prevented installation of this package. You will need to install
-R-3.4.1 or higher
+There was a bug in R-3.4.0 that prevented installation of this package. You will
+need to install R-3.4.1 or higher. 
+
+This package also depends on the RPostgres package which is not yet available on CRAN. 
+You will need to install the following from GitHub.
 
 ```{r, eval = FALSE}
 # Install the development version from GitHub:
 # install.packages("devtools")
+devtools::install_github("RcppCore/Rcpp")
+devtools::install_github("rstats-db/DBI")
+devtools::install_github("rstats-db/RPostgres")
 devtools::install_github("arestrom/repg")
 ```
+
+## Storing connection credentials
+
+In order to use the functions in this package you **must** store your connection credenials: `host_name`, `username`, and `password` in your `.Renviron` file. To add these items to your `.Renviron` file you will first need to create, or locate, your '.Renviron' file. In your R console, enter: 
+
+```{r, eval = FALSE}
+normalizePath("~/")
+```
+
+The path to your '.Renviron' file will be displayed. Use RStudio to either create a new `.Renviron` file if it does not exist, or open the existing `.Renviron` file from the specified location. A full set of credentials to connect to PostgreSQL should look similar to:
+
+```
+my_pg_host_aws=ec2-66-666-666-66.us-west-2.compute.amazonaws.com
+my_pg_username_aws=super_secret_user
+my_pg_password_aws=super_secret_password
+my_pg_host_local=localhost
+my_pg_username_local=semi_secret_user
+my_pg_password_local=semi_secret_password
+
+```
+Simply add your credentials as in the example above. The parameters *host_label, user_label, and password_label* are the parts before the equals sign. The actual values needed to connect are the parts following the equals sign. See the example for the `pg_con()` function to see how you would use the labels as arguments to the function. 
+
+Make sure there is an extra space at the bottom of the last entry in the .Renviron file before saving, or R will silently fail to read the entries. You will need to close RStudio and then reopen after saving. Afterwards, every time you open RStudio the environment variables will be available in your session.
+
+Detailed instructions on how to add credentials to your .Renviron file can be found in the Appendix section of: https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html 
 
 
