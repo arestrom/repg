@@ -12,6 +12,7 @@ Description: A collection of tools to work with PostgreSQL connections and
 License: MIT + file LICENSE
 Depends: R (>= 3.4.1)
 Imports:
+    Rcpp (>= 0.12.11)
     DBI (>= 0.7),
     RPostgres (>= 0.1-4)
 Encoding: UTF-8
