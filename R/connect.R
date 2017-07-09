@@ -1,14 +1,20 @@
 #' Get database server username from .Renviron file
+#' @rdname pg_user
+#' @param user_label Alias for username
 pg_user <- function(user_label) {
   Sys.getenv(user_label)
 }
 
 #' Get database server password from .Renviron file
+#' @rdname pg_pw
+#' @param pw_label Alias for password
 pg_pw <- function(pw_label) {
   Sys.getenv(pw_label)
 }
 
 #' Get database server host from .Renviron file
+#' @rdname pg_host
+#' @param Alias for host
 pg_host <- function(host_label) {
   Sys.getenv(host_label)
 }

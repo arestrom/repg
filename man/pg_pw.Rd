@@ -6,6 +6,9 @@
 \usage{
 pg_pw(pw_label)
 }
+\arguments{
+\item{pw_label}{Alias for password}
+}
 \description{
 Get database server password from .Renviron file
 }

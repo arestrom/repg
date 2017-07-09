@@ -6,6 +6,9 @@
 \usage{
 pg_user(user_label)
 }
+\arguments{
+\item{user_label}{Alias for username}
+}
 \description{
 Get database server username from .Renviron file
 }

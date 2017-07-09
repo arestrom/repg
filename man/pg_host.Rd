@@ -6,6 +6,9 @@
 \usage{
 pg_host(host_label)
 }
+\arguments{
+\item{Alias}{for host}
+}
 \description{
 Get database server host from .Renviron file
 }
