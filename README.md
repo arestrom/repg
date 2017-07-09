@@ -7,7 +7,7 @@ Overview
 
 This package includes a collection of tools to work with PostgreSQL connections and databases. Connection functions require credentials to be stored in your `.Renviron` file. This avoids the need to supply usernames or password in code. It also avoids potential for accidentally exposing credentials when sharing code in public repositories.
 
-The idea of storing credentials in the .Renviron file comes from a post by Hadley Wickham: <https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html>
+The idea of storing credentials in the `.Renviron` file comes from a post by Hadley Wickham: <https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html>
 
 Installation
 ------------
@@ -17,7 +17,7 @@ There was a bug in R-3.4.0 that prevented installation of this package. You will
 This package also depends on the RPostgres package which is not yet available on CRAN. You will need to install the following from GitHub.
 
 ``` r
-# Install the development version from GitHub:
+# Install the development versions from GitHub:
 # install.packages("devtools")
 devtools::install_github("RcppCore/Rcpp")
 devtools::install_github("rstats-db/DBI")
@@ -28,13 +28,13 @@ devtools::install_github("arestrom/repg")
 Storing connection credentials
 ------------------------------
 
-In order to use the functions in this package you **must** store your connection credenials: `host_name`, `username`, and `password` in your `.Renviron` file. To add these items to your `.Renviron` file you will first need to create, or locate, your '.Renviron' file. In your R console, enter:
+In order to use the functions in this package you **must** store your connection credenials: `host_name, username, and password` in your `.Renviron` file. To add these items to your `.Renviron` file you will first need to create, or locate, your `.Renviron` file. In your R console, enter:
 
 ``` r
 normalizePath("~/")
 ```
 
-The path to your '.Renviron' file will be displayed. Use RStudio to either create a new `.Renviron` file if it does not exist, or open the existing `.Renviron` file from the specified location. A full set of credentials to connect to PostgreSQL should look similar to:
+The path to your `.Renviron` file will be displayed. Use RStudio to either create a new `.Renviron` file if it does not exist, or open the existing `.Renviron` file from the specified location. A full set of credentials to connect to PostgreSQL should look similar to:
 
     my_pg_host_aws=ec2-66-666-666-66.us-west-2.compute.amazonaws.com
     my_pg_username_aws=super_secret_user
@@ -43,8 +43,8 @@ The path to your '.Renviron' file will be displayed. Use RStudio to either creat
     my_pg_username_local=semi_secret_user
     my_pg_password_local=semi_secret_password
 
-Simply add your credentials as in the example above. The parameters *host\_label, user\_label, and password\_label* are the parts before the equals sign. The actual values needed to connect are the parts following the equals sign. See the example for the `pg_con()` function to see how you would use the labels as arguments to the function.
+Simply add your credentials as in the example above. The parameters `host_label, user_label, and password_label` are the parts before the equals sign. The actual values needed to connect are the parts following the equals sign. See the example for the `pg_con()` function to see how you would use the labels as arguments to the function.
 
-Make sure there is an extra space at the bottom of the last entry in the .Renviron file before saving, or R will silently fail to read the entries. You will need to close RStudio and then reopen after saving. Afterwards, every time you open RStudio the environment variables will be available in your session.
+Make sure there is an extra space at the bottom of the last entry in the `.Renviron` file before saving, or R will silently fail to read the entries. You will need to close RStudio and then reopen after saving. Afterwards, every time you open RStudio the environment variables will be available in your session.
 
-Detailed instructions on how to add credentials to your .Renviron file can be found in the Appendix section of: <https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html>
+Detailed instructions on how to add credentials to your `.Renviron` file can be found in the Appendix section of: <https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html>
