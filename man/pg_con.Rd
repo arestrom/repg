@@ -35,8 +35,7 @@ See the Readme file at \url{https://github.com/arestrom/repg} for
 }
 \section{Warning}{
 
-Remember to \emph{always close} your connection after you are done. See
-example below.
+Remember to close your connection after you are done. See example below.
 }
 
 \examples{

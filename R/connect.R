@@ -33,8 +33,7 @@ pg_host <- function(host_label) {
 #'   connection credentials in your \code{.Renviron} file.
 #'
 #' @section Warning:
-#' Remember to \emph{always close} your connection after you are done. See
-#' example below.
+#' Remember to close your connection after you are done. See example below.
 #'
 #' @rdname pg_con
 #' @param dbname a database on a PostgreSQL server
