@@ -14,7 +14,7 @@ pg_pw <- function(pw_label) {
 
 #' Get database server host from .Renviron file
 #' @rdname pg_host
-#' @param Alias for host
+#' @param host_label Alias for host
 pg_host <- function(host_label) {
   Sys.getenv(host_label)
 }
